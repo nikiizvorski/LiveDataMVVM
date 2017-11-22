@@ -15,14 +15,12 @@ import io.realm.Realm;
 public class ExViewModel extends ViewModel implements ExViewModelaInfo {
     @Inject
     ExRepository exRepository;
-    Realm mDb;
 
     private MutableLiveData<String> infoName = new MutableLiveData<>();
 
     @Inject
     public ExViewModel(ExRepository exRepository) {
         this.exRepository = exRepository;
-        mDb = Realm.getDefaultInstance();
     }
 
     public LiveData<String> getInfoName() {
@@ -34,7 +32,6 @@ public class ExViewModel extends ViewModel implements ExViewModelaInfo {
     protected void onCleared() {
         super.onCleared();
         exRepository = null;
-        mDb.close();
     }
 
     public void setInfoName(CharSequence charSequence) {
