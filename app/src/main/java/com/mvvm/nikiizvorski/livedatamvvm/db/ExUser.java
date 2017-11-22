@@ -3,7 +3,7 @@ package com.mvvm.nikiizvorski.livedatamvvm.db;
 import io.realm.RealmModel;
 
 /**
- * Created by nikiizvorski on 22/11/2017.
+ * Created by nikiizvorski on 22/11/2017
  */
 
 public class ExUser implements RealmModel{
