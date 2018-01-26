@@ -60,7 +60,9 @@ public class MainActivity extends AppCompatActivity {
         final Observer<String> elapsedTimeObserver = new Observer<String>() {
             @Override
             public void onChanged(@Nullable final String aLong) {
-                textView.setText(String.valueOf(aLong));
+                if (aLong != null) {
+                    textView.setText(String.valueOf(aLong));
+                }
             }
         };
 

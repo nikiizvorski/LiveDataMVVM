@@ -8,7 +8,6 @@ import dagger.Component;
 /**
  * Created by nikiizvorski on 22/11/2017.
  */
-
 @CustomScope
 @Component(modules = ExModule.class)
 public interface ExComponent {

@@ -9,8 +9,9 @@ import io.realm.RealmResults;
 
 /**
  * Created by nikiizvorski on 22/11/2017.
+ *
+ * @param <T> the type parameter
  */
-
 public class RealmLiveData<T extends RealmModel> extends LiveData<RealmResults<T>> {
     private RealmResults<T> results;
     private final RealmChangeListener<RealmResults<T>> listener =
@@ -20,6 +21,12 @@ public class RealmLiveData<T extends RealmModel> extends LiveData<RealmResults<T
                     setValue(results);
                 }
             };
+
+    /**
+     * Instantiates a new Realm live data.
+     *
+     * @param realmResults the realm results
+     */
     public RealmLiveData(RealmResults<T> realmResults) {
         results = realmResults;
     }
